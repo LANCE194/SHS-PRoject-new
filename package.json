@@ -1,0 +1,27 @@
+{
+  "name": "ambak",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n api,web \"node --watch server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "create-teacher": "node server/create-teacher.js",
+    "backup": "node server/backup.js",
+    "test": "node scripts/smoke-test.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^12.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.0.0",
+    "vite": "^7.0.0"
+  }
+}
